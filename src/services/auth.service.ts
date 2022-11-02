@@ -10,8 +10,8 @@ const cryptoJS = require("crypto-js");
 
 @injectable({scope: BindingScope.TRANSIENT})
 export class AuthService {
-  constructor(@repository(UsuarioRepository)
-  public usuarioRepository: UsuarioRepository) {}
+  constructor(
+  @repository(UsuarioRepository) public usuarioRepository: UsuarioRepository) {}
 
 GenerarClave() {
   const clave = generator(8, false);
