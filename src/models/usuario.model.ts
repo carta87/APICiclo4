@@ -31,7 +31,7 @@ export class Usuario extends Entity {
     type: 'string',
     required: true,
   })
-  celular: string;
+  telefono: string;
 
   @property({
     type: 'string',

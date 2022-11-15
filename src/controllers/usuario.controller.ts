@@ -87,7 +87,7 @@ export class UsuarioController {
     let destino = configuracion.tipoComunicacion;
 
     if(tipo == 'sms'){
-      destino = usuario.celular;
+      destino = usuario.telefono;
       servicioWeb = 'send_sms';
     }else{
       destino = usuario.correo;

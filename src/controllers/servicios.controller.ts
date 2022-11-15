@@ -22,6 +22,7 @@ export class ServiciosController {
     public serviciosRepository : ServiciosRepository,
   ) {}
 
+  @authenticate.skip()
   @post('/servicios')
   @response(200, {
     description: 'Servicios model instance',
