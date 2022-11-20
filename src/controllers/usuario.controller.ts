@@ -89,7 +89,8 @@ export class UsuarioController {
     if(tipo == 'sms'){
       destino = usuario.telefono;
       servicioWeb = 'send_sms';
-    }else{
+    }
+    if (tipo == 'email') {
       destino = usuario.correo;
       servicioWeb = 'send_email';
     }
