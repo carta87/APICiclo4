@@ -81,10 +81,11 @@ export class UsuarioController {
     const clave = this.servicioAuth.GenerarClave();
     const claveCifrada = this.servicioAuth.CifrarClave(clave);
     usuario.password = claveCifrada;
-    let tipo = ''; //Definimos el tipo de comunicacion
-    tipo = '';
+
+    let tipo = '';
+    tipo = configuracion.tipoComunicacion; //Definimos el tipo de comunicacion
     let servicioWeb = '';
-    let destino = configuracion.tipoComunicacion;
+    let destino = '';
 
     if(tipo == 'sms'){
       destino = usuario.telefono;

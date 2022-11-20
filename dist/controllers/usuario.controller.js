@@ -40,10 +40,10 @@ let UsuarioController = class UsuarioController {
         const clave = this.servicioAuth.GenerarClave();
         const claveCifrada = this.servicioAuth.CifrarClave(clave);
         usuario.password = claveCifrada;
-        let tipo = ''; //Definimos el tipo de comunicacion
-        tipo = '';
+        let tipo = '';
+        tipo = config_1.configuracion.tipoComunicacion; //Definimos el tipo de comunicacion
         let servicioWeb = '';
-        let destino = config_1.configuracion.tipoComunicacion;
+        let destino = '';
         if (tipo == 'sms') {
             destino = usuario.telefono;
             servicioWeb = 'send_sms';
