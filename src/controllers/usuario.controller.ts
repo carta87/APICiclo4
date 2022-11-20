@@ -111,7 +111,7 @@ export class UsuarioController {
         contenido: contenido
       }
     }).then((data) => {
-      console.log(data)
+      console.log(data+ "desde API backend")
     }).catch((err) => {
       console.log(err)
     });
