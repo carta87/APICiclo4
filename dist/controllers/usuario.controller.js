@@ -48,7 +48,7 @@ let UsuarioController = class UsuarioController {
             destino = usuario.telefono;
             servicioWeb = 'send_sms';
         }
-        else {
+        if (tipo == 'email') {
             destino = usuario.correo;
             servicioWeb = 'send_email';
         }
